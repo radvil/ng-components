@@ -1,17 +1,10 @@
 <div id="layout" [class.aside]="layoutService.asideMode()">
-  <nav
-    class="navbar"
-    #sidenav
-    [class.expanded]="layoutService.sidebarExpanded()"
-  >
+  <nav class="navbar" #sidenav [class.expanded]="layoutService.sidebarExpanded()">
     <ul class="nav-list-item">
       <li class="logo">
         <a class="nav-link">
-          <span class="link-text logo-text">AMI-ERP</span>
-          <fa-angle-double-right
-            style="cursor: pointer"
-            (click)="layoutService.toggleSidenavExpanded()"
-          />
+          <span class="link-text logo-text">NG UI</span>
+          <fa-angle-double-right style="cursor: pointer" (click)="layoutService.toggleSidenavExpanded()" />
         </a>
       </li>
 
@@ -43,11 +36,7 @@
         </a>
       </li>
 
-      <li
-        class="nav-item"
-        id="themeButton"
-        *ngrxLet="layoutService.colorscheme() as theme"
-      >
+      <li class="nav-item" id="themeButton" *ngrxLet="layoutService.colorscheme() as theme">
         <a class="nav-link" (click)="layoutService.switchColorScheme()">
           <ng-container [ngSwitch]="theme">
             <fa-moon-stars *ngSwitchCase="'dark'" />
