@@ -3,6 +3,16 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@common": [
+        "dist/common",
+        "projects/common/src/public-api.ts"
+      ],
+      "@ui": [
+        "dist/ui",
+        "projects/ui/src/public-api.ts"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
